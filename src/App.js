@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import BackToTopButton from "./components/BackToTop";
+import BasicSummary from "./components/BasicSummary";
+import CoRelation from "./components/CoRelation";
+import CountSummary from "./components/CountSummary";
+import Footer from "./components/Footer";
+import NavBar from "./components/NavBar";
+import SideBar from "./components/SideBar";
+import TopData from "./components/TopData";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="grid grid-cols-12">
+      <div className="col-span-2 border  border-r-2 mr-12">
+        <SideBar />
+      </div>
+      <div className="col-span-10 mr-[70px] ">
+        <NavBar />
+
+        <div className="border border-gray-300 border-spacing-6 rounded-md p-12 mt-[150px]">
+          <BasicSummary />
+        </div>
+        <div className="">
+          <CountSummary />
+          <CoRelation />
+          <TopData />
+        </div>
+        <BackToTopButton />
+        <Footer />
+      </div>
+      {/* <div className="col-span-1"></div> */}
     </div>
   );
 }
-
-export default App;
