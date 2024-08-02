@@ -5,7 +5,7 @@ export default function TopData() {
   const [topData, setTopData] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/top_data/")
+    fetch(`${process.env.REACT_APP_API_URL}/api/top_data/`)
       .then((response) => response.json())
       .then((data) => setTopData(data));
   }, []);

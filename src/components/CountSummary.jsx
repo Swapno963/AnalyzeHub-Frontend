@@ -8,7 +8,7 @@ export default function CountSummary() {
   const [summaryData, setSummaryData] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/count_summary/")
+    fetch(`${process.env.REACT_APP_API_URL}/api/count_summary/`)
       .then((response) => response.json())
       .then((data) => setSummaryData(data));
   }, []);

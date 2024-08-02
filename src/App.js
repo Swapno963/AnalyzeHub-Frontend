@@ -27,7 +27,6 @@ export default function App() {
         <BackToTopButton />
         <Footer />
       </div>
-      {/* <div className="col-span-1"></div> */}
     </div>
   );
 }
