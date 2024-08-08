@@ -6,9 +6,20 @@ export default function BasicSummary() {
 
   // loading summary data
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/api/basic_summary/`)
+    const url = process.env.REACT_APP_API_URL + "api/basic_summary/";
+    console.log(url);
+
+    fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
       .then((response) => response.json())
-      .then((data) => setSummaryData(data));
+      .then((data) => setSummaryData(data))
+      .catch((error) => {
+        console.error("Error fetching the data:", error);
+      });
   }, []);
 
   // custom array for line chart
@@ -75,10 +86,10 @@ export default function BasicSummary() {
         <h2 className="text-xl text-gray-500 font-bold pb-2">
           Some Basic Summary :{" "}
         </h2>
-        <h2 class="mb-2 text-lg font-semibold text-gray-600 ">
+        <h2 className="mb-2 text-lg font-semibold text-gray-600 ">
           Hear we work with:
         </h2>
-        <ul class="max-w-md pb-3 space-y-1 text-gray-500 list-disc list-inside ">
+        <ul className="max-w-md pb-3 space-y-1 text-gray-500 list-disc list-inside ">
           <li>This analysis Done by {summaryData?.total} Entry</li>
           {/* <li>
             Hear we have quantitative data like: Impact, Likelihood and
@@ -89,51 +100,51 @@ export default function BasicSummary() {
           </li> */}
         </ul>
 
-        <div class="relative overflow-x-auto">
-          <table class="w-full text-sm text-left rtl:text-right text-gray-600">
-            <thead class="text-xs text-white uppercase bg-[#776cea]  ">
+        <div className="relative overflow-x-auto">
+          <table className="w-full text-sm text-left rtl:text-right text-gray-600">
+            <thead className="text-xs text-white uppercase bg-[#776cea]  ">
               <tr>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" className="px-6 py-3">
                   Parameter name
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" className="px-6 py-3">
                   Min
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" className="px-6 py-3">
                   Max
                 </th>
               </tr>
             </thead>
             <tbody className="bg-[#9087f4] text-white">
-              <tr class=" border-b  ">
+              <tr className=" border-b  ">
                 <th
                   scope="row"
-                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
                   Intensity
                 </th>
-                <td class="px-6 py-4">{summaryData?.min_intensity}</td>
-                <td class="px-6 py-4">{summaryData?.max_intensity}</td>
+                <td className="px-6 py-4">{summaryData?.min_intensity}</td>
+                <td className="px-6 py-4">{summaryData?.max_intensity}</td>
               </tr>
-              <tr class=" border-b ">
+              <tr className=" border-b ">
                 <th
                   scope="row"
-                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
                   Likelihood
                 </th>
-                <td class="px-6 py-4">{summaryData?.min_likelihood}</td>
-                <td class="px-6 py-4">{summaryData?.max_likelihood}</td>
+                <td className="px-6 py-4">{summaryData?.min_likelihood}</td>
+                <td className="px-6 py-4">{summaryData?.max_likelihood}</td>
               </tr>
-              <tr class=" ">
+              <tr className=" ">
                 <th
                   scope="row"
-                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
                   Relevance
                 </th>
-                <td class="px-6 py-4">{summaryData?.min_relevance}</td>
-                <td class="px-6 py-4">{summaryData?.max_relevance}</td>
+                <td className="px-6 py-4">{summaryData?.min_relevance}</td>
+                <td className="px-6 py-4">{summaryData?.max_relevance}</td>
               </tr>
             </tbody>
           </table>

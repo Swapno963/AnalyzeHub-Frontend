@@ -6,11 +6,17 @@ export default function CoRelation() {
   const [coRelationData, setcoRelationData] = useState([]);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/api/co_relaton/`)
+    const url = process.env.REACT_APP_API_URL + "api/co_relaton/";
+    fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
       .then((response) => response.json())
       .then((data) => setcoRelationData(data));
   }, []);
-  // console.log("checking", coRelationData);
+  console.log("checking", coRelationData);
   return (
     <div className="flex justify-evenly py-12 my-12">
       <div>
