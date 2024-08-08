@@ -8,7 +8,15 @@ export default function BoxPlotSummary({ sector_id }) {
   const [boxData, setBoxData] = useState([]);
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/api/get_data/?sector=${selectedSector}`)
+    const url =
+      process.env.REACT_APP_API_URL + `/api/get_data/?sector=${selectedSector}`;
+    console.log(url);
+    fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
       .then((response) => response.json())
       .then((data) => {
         setBoxData(GetDataForSummary(data?.results));
