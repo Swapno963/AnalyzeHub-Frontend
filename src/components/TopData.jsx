@@ -5,7 +5,7 @@ export default function TopData() {
   const [topData, setTopData] = useState([]);
 
   useEffect(() => {
-    const url = process.env.REACT_APP_API_URL + "api/top_data/";
+    const url = process.env.REACT_APP_API_URL + "/api/top_data/";
 
     fetch(url, {
       method: "GET",

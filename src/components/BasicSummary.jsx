@@ -6,7 +6,7 @@ export default function BasicSummary() {
 
   // loading summary data
   useEffect(() => {
-    const url = process.env.REACT_APP_API_URL + "api/basic_summary/";
+    const url = process.env.REACT_APP_API_URL + "/api/basic_summary/";
     console.log(url);
 
     fetch(url, {
