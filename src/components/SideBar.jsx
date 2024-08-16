@@ -76,7 +76,7 @@ export default function SideBar() {
         { id: 102, title: "Bar Chart", url: "", icon: "" },
         { id: 103, title: "Min Max Table", url: "", icon: "" },
       ],
-      url: "",
+      url: "#dashboard",
       icon: "",
     },
     {
@@ -86,7 +86,7 @@ export default function SideBar() {
         { id: 201, title: "Box Plot", url: "", icon: "" },
         { id: 202, title: "Top Sectors", url: "", icon: "" },
       ],
-      url: "",
+      url: "#count",
       icon: "",
     },
     {
@@ -96,7 +96,7 @@ export default function SideBar() {
         { id: 301, title: "Country", url: "", icon: "" },
         { id: 302, title: "Topic", url: "", icon: "" },
       ],
-      url: "",
+      url: "#mostAppear",
       icon: "",
     },
     {
@@ -106,7 +106,7 @@ export default function SideBar() {
         { id: 401, title: "Sector-Pie", url: "", icon: "" },
         { id: 402, title: "Sector-Line", url: "", icon: "" },
       ],
-      url: "",
+      url: "#mostIntense",
       icon: "",
     },
     {
@@ -116,7 +116,7 @@ export default function SideBar() {
         { id: 501, title: "Impact", url: "", icon: "" },
         { id: 502, title: "Intensity", url: "", icon: "" },
       ],
-      url: "",
+      url: "#topFive",
       icon: "",
     },
     { id: 6, title: "Ecommerce", url: "", icon: "" },

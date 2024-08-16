@@ -18,7 +18,7 @@ export default function TopData() {
   }, []);
   // console.log(topData);
   return (
-    <div className="grid grid-cols-2 gap-10">
+    <div id="topFive" className="grid grid-cols-2 gap-10">
       {topData?.top_impact && (
         <TopIntensity data={topData?.top_impact} besedOn={"Impact"} />
       )}

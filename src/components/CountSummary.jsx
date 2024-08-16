@@ -30,7 +30,7 @@ export default function CountSummary() {
   // console.log("summaryData?.sector_id : ", sortedData);
   return (
     <div>
-      <div className="grid grid-cols-2 mt-12">
+      <div id="count" className="grid grid-cols-2 mt-12">
         <div>
           {summaryData?.sector_id && (
             <BoxPlotSummary sector_id={summaryData?.sector_id} />
@@ -47,7 +47,7 @@ export default function CountSummary() {
       {/* {summaryData?.country_id && (
         <CountryBarChart data={summaryData?.country_id.slice(1, 20)} />
       )} */}
-      <div className="flex justify-center my-12 py-12">
+      <div id="mostAppear" className="flex justify-around my-12 py-12 ">
         <div>
           <h2 className="text-gray-700 font-semibold text-2xl pb-4">
             Most Appear Country :

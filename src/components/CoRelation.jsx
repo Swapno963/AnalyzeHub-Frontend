@@ -18,7 +18,7 @@ export default function CoRelation() {
   }, []);
   console.log("checking", coRelationData);
   return (
-    <div className="flex justify-evenly py-12 my-12">
+    <div id="mostIntense" className="flex justify-around py-12 my-12">
       <div>
         <h2 className="text-gray-700 font-semibold text-2xl pb-4">
           Most Intense Sector :

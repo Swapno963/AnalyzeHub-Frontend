@@ -30,7 +30,7 @@ export default function BasicSummary() {
   ];
   // console.log(arr);
   return (
-    <div className="grid grid-cols-3 gap-14">
+    <div className="grid grid-cols-3 gap-14" id="dashboard">
       {/* total data and some average data  */}
       <div className="bg-[#776cea]  rounded-md p-8 shadow-xl">
         <img
