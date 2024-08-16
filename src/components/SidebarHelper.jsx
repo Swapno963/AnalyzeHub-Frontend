@@ -40,7 +40,7 @@ export default function SidebarHelper({ link }) {
                 transitionProperty: "max-height, opacity",
               }}
             >
-              {ch?.title}
+              <a href={`/${link?.url}`}>{ch?.title}</a>
             </p>
           ))
         }
