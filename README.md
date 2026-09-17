@@ -1,59 +1,38 @@
-# AnalyzeHub: Dashboard App Frontend
+# AnalyzeHub frontend
 
-This is the frontend of the Dashboard App, built with React and utilizing D3.js for data visualization.
+React dashboard that charts AnalyzeHub API data with D3.js (bar, pie, line, box plot, tables).
 
-## Live Site
+**Status:** personal / lab. API: [AnalyzeHub-Backend](https://github.com/Swapno963/AnalyzeHub-Backend).
 
-You can access the live site [here](https://analyze-hub-frontend.vercel.app/)
+A Vercel URL may exist from an earlier deploy; treat it as optional.
 
-## Features
+---
 
-1. Interactive data visualizations with D3.js
-2. Dynamic dashboards with bar charts, pie charts, line charts, box plots, and tables
-3. API integration for data analysis
+## What it does
 
-4. **Basic summary**
+- Pulls summary and ranking data from the Django API
+- Renders interactive D3 charts and tables
 
-   - Hear we showing total data count,average of likelihod,intensity,relevance
-   - Hear we showing maximun of likelihod,intensity,relevance
-   - Hear we showing minimun of likelihod,intensity,relevance
+---
 
-5. **Count summary**
+## What I built
 
-   - Analyzing the total number of records grouped by sector, topic, region, and country.
+- React client and D3 visualizations
+- API integration for the dashboard widgets
 
-6. **Top Data**
-   - Top 5 records ordered by intensity, impact, relevance, and likelihood from the dashbordModel
-   - After retrieving the records, they are serialized using Django’s MyModelSerializer to convert the queryset into a JSON format for API response
+---
 
-## set up and Installation
+## Stack
 
-1. Clone the repository:
+React, D3.js.
 
-   ```sh
-   git clone https://github.com/Swapno963/AnalyzeHub-Frontend.git
+---
 
-   cd AnalyzeHub-Frontend
-   ```
+## Run
 
-2. Install dependencies:
-
-   ```sh
-
-   npm install
-   ```
-
-3. Run the development server:
-   ```sh
-   npm run start
-   ```
-
-## Usage
-
-- Access the application at `http://localhost:3000/`
-
-## Contact
-
-If you have any questions or feedback, feel free to contact me:
-
-- Swapno Mondol - [Linkedin](https://www.linkedin.com/in/swapno-mondol/)- [Facebook](https://www.facebook.com/profile.php?id=100090206887787) - swapno963@gmail.com
+```bash
+git clone https://github.com/Swapno963/AnalyzeHub-Frontend.git
+cd AnalyzeHub-Frontend
+npm install
+npm start
+```
